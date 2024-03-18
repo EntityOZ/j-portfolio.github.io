@@ -1,0 +1,394 @@
+/*
+Colours used::
+Primary Colour (Teal): #1AA1C7 or RGB (26, 161, 199) or RGBa (26, 161, 199, 0.8) if 80% opacity;
+Secondary Colour (Dark Mauve): #AF55D8 or RGB (175, 85, 216);
+Charcoal (Main Text/P): #595959;
+Light Grey (Accent Heading/Body Colour): #757575;
+Dark Teal (Visited Hyperlinks): #15809E;
+Darker Mauve (Active Hyperlinks): #9F33D1;
+*/
+
+header {
+  background-color: rgb(26, 161, 199, 0.27);
+  padding: 10px 0 4px;
+  margin: 10px;
+  border-bottom: 3px solid #4a4a4a;
+  position: fixed;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: 'Roboto Flex', sans-serif; /* use Roboto Flex if available, otherwise use a sans serif font */
+  font-size: 18px; /* sets the font size to 16px */
+  font-weight: 300; /* sets font weight to 300 */
+  line-height: 1.6; /* sets the line height to 1.6 * the font size */
+  color: #595959;
+}
+
+main {
+  padding-top: 147.88px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+img {
+  width: 100%; /* sets the image width to 100%, so imgs scale properly */
+}
+
+h1#heading {
+  color: black;
+}
+
+.logo {
+  width: 90px;
+  height: 50px;
+  max-width: 150px;
+}
+
+.profile-pic {
+  height: 300;
+  width: 100;
+}
+
+/* links */
+a {
+  color: #1aa1c7;
+  text-decoration: none; /* No underlining */
+}
+
+a:visited { /* visited link */
+  color: #1aa1c7;
+}
+
+a:hover,
+a:focus {
+  color: #af55d8;
+  text-decoration: underline; /* Underlining when hovering over a link or going over it with your keyboard */
+}
+
+a:active { /* selected link */
+  color: #9f33d1;
+}
+
+/* buttons */
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #1aa1c7;
+  color: #fff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #595959; /* width of the border, type, color */
+  opacity: 0.9; /* check if needed??? */
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: 0.8; /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button:active {
+  color: #9f33d1;
+}
+
+.button:visited {
+  color: black;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #1aa1c7;
+  text-transform: uppercase;
+  border: 2px solid #1aa1c7;
+}
+
+.button.contact:hover {
+  background-color: #1aa1c7;
+  color: #fff;
+}
+
+.button.contact:active {
+  color: #9f33d1;
+}
+
+/* Layout styling */
+
+.container {
+  padding: 0 15px;
+}
+
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px;
+  color: #595959;
+}
+
+#hero h1 {
+  text-align: center; /* Centers text */
+}
+
+#hero p {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+#header header {
+  text-align: center;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+nav > ul > li > a:visited {
+  color: #1aa1c7;
+}
+
+nav > ul > li > a:hover,
+a:focus {
+  color: #af55d8;
+}
+
+nav > ul > li > a:active {
+  color: #9f33d1;
+}
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle,
+.navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 127, 80, 0.5);
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+#hero {
+  background-color: rgb(222, 193, 236, 0.36);
+  margin: 10px;
+  padding: 20px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+#hero span {
+  display: block;
+}
+
+.background-image {
+  background-image: url(../img/farm-to-table/tractor-in-field@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.css-box-shadow {
+  /* start ------------ */
+  width: [object Object]px;
+  height: [object Object]px;
+  background: #f8f8f8;
+  border: solid #bdbdbd 1px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* media queries */
+
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+    width: 100;
+  }
+
+  nav > ul {
+    margin: 1em 0;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  #about-page h3 {
+    margin-top: 0;
+  }
+
+  .logo {
+    max-width: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 0 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#about-picture {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+#animation {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes color-change {
+  0% { fill: #edc655; }
+  50% { fill: #fcffad; }
+  100% { fill: #f76414; }
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from { transform: translate(0, 50px); }
+  to { transform: translate(200px, 50px); }
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from { transform: translate(446px, 48px); }
+  to { transform: translate(356px, 48px); }
+}
+
+.cloud-back {
+  animation: 30s cloud-move-reverse infinite alternate linear;
+}
+
+@keyframes clouds-move {
+  from { transition: translate(10px, 18px); }
+  to { transform: translate(30px, 18px); }
+}
+
+.clouds {
+  animation: 30s clouds-move infinite alternate linear;
+}
